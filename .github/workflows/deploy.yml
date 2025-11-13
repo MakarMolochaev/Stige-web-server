@@ -1,4 +1,4 @@
-name: Deploy Web Server
+name: "[PROD] Deploy Web Server"
 
 on:
   workflow_dispatch:
