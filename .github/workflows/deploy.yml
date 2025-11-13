@@ -1,0 +1,14 @@
+name: Deploy Web Server
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: makarmolochaev/devops-pipelines/.github/workflows/deploy-service.yml@master
+    with:
+      service_name: stige-web-server
+    secrets:
+      HOST: ${{ secrets.HOST }}
+      DEPLOYER_USER: ${{ secrets.DEPLOYER_USER }}
+      DEPLOYER_SSH_KEY: ${{ secrets.DEPLOYER_SSH_KEY }}
